@@ -1,0 +1,49 @@
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card card-nav-tabs">
+        <div class="card-header" data-background-color="purple">
+          <div class="nav-tabs-navigation">
+            <div class="nav-tabs-wrapper">
+              <span class="nav-tabs-title">Tab:</span>
+              <ul class="nav nav-tabs" data-tabs="tabs">
+                <li class="active">
+                  <a href="#product_list" data-toggle="tab">
+                    <i class="material-icons">shopping_basket</i>
+                    Product List
+                  </a>
+                </li>
+                <li class="">
+                  <a href="#product_type" data-toggle="tab">
+                    <i class="material-icons">next_week</i>
+                    Product Type
+                  </a>
+                </li>
+                <li class="">
+                  <a href="#provider" data-toggle="tab">
+                    <i class="material-icons">supervisor_account</i>
+                    Provider
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-content">
+          <div class="tab-content">
+            <div class="tab-pane active" id="product_list">
+              <app-product-list></app-product-list>
+            </div>
+            <div class="tab-pane" id="product_type">
+              <app-product-type></app-product-type>
+            </div>
+            <div class="tab-pane" id="provider">
+              <app-provider></app-provider>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,3 +1,4 @@
+import { ProductModule } from './product/product.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -17,7 +18,7 @@ import { IconsComponent } from './icons/icons.component';
 import { MapsComponent } from './maps/maps.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { UpgradeComponent } from './upgrade/upgrade.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,11 +33,13 @@ import { UpgradeComponent } from './upgrade/upgrade.component';
 
   ],
   imports: [
+    ProductModule,
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     ComponentsModule,
-RouterModule,
+    RouterModule,
     AppRoutingModule
   ],
   providers: [],
