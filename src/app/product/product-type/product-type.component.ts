@@ -1,4 +1,6 @@
+import { FormBuilder, FormGroup,Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-product-type',
@@ -7,10 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductTypeComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private fb:FormBuilder) { }
+  type_form :FormGroup;
   ngOnInit() {
-    console.log('product type view init')
+    this.type_form = this.fb.group({
+      name:['',Validators.required]
+    })
   }
 
 }

@@ -36,11 +36,11 @@
         <h4 class="modal-title">Product infomation</h4>
       </div>
       <div class="modal-body">
-        <form  novalidate [formGroup]="productForm">
+        <form novalidate [formGroup]="productForm">
           <div class="form-group form-black label-floating is-empty">
             <label class="control-label">Name</label>
             <input type="text" value="hi baybe" formControlName="name" class="form-control">
-            
+
           </div>
           <label class="text-danger" *ngIf="productForm.get('name').hasError('required') && productForm.get('name').touched">
             name is required
@@ -65,9 +65,12 @@
             <label class="control-label">Price</label>
             <input type="text" class="form-control" formControlName="price">
           </div>
+          <label class="text-danger" *ngIf="productForm.get('price').hasError('required') && productForm.get('price').touched">
+            price is required
+          </label>
           <div class="form-group form-black label-floating is-empty">
             <label class="control-label">New Price</label>
-            <input type="text" class="form-control"formControlName="newPrice">
+            <input type="text" class="form-control" formControlName="newPrice">
           </div>
           <div class="form-group form-black label-floating is-empty">
             <label>Description</label>
@@ -78,7 +81,7 @@
           <div class="checkbox">
             <input type="file" placeholder="Upload file" accept=".pdf,.doc,.docx">
             <label>
-              <input type="checkbox"  formControlName="status"> hide</label>
+              <input type="checkbox" formControlName="status"> hide</label>
           </div>
         </form>
       </div>
